@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Coding Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Python provides a built-in function print() to perform console output. The print() function is used to display the result on to the console.">
+    
+    <meta name="keywords" content="Python Programming,Python print function,Python coding,C programming,java programming,python programming,data structures,machine learning,data science,php,html,css,java script,type script">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
+
+    <!-- Prism for coding font -->
+    <link href="./css/prism.css" rel="stylesheet" />
+
+    <!-- fontawesome -->
+    <script src="https://use.fontawesome.com/f33438b6b3.js"></script>
+
+    
+    <script src="./js/script.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+    <script>   (adsbygoogle = window.adsbygoogle || []).push({     google_ad_client: "ca-pub-5748249710427552",     enable_page_level_ads: true   }); 
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+  
+  <a class="navbar-brand" href="http://www.btechsmartclass.com/">
+    <img src="./images/logo.png" alt="BTech Smart Class" height="30" width="130">
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="http://www.btechsmartclass.com/"> <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-3 dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-book"></i> Courses
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/c_programming/introduction-to-c-programming.html">C Programming</a>
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/data_structures/introduction-to-algorithms.html">Data Structures</a>
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/c_plus_plus/c_plus_plus_index.html">C++ Programming</a>
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/java/java-tutorials.html">Java Programming</a>
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/python/Python_Tutorial_Introduction_to_Python.html">Python Programming</a>
+          <a class="dropdown-item" href="http://www.btechsmartclass.com/python-coding">Python Coding</a>
+        </div>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="http://www.btechsmartclass.com/downloads.html"><i class="fa fa-download"></i> Downloads</a>
+      </li>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="http://www.btechsmartclass.com/contact-us.html"><i class="fa fa-phone"></i> Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>    
+<div id="carouselExampleControls" class="carousel fade-in" data-ride="carousel" style="margin-top: 50px;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-caption">
+        <h2>Coding Challenges</h2>
+        <p class="text-light">Python is a general-purpose and multi-paradigm computer programming language</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption">
+        <h2>Coding Challenges</h2>
+        <p class="text-light">Python is the most popular and fast growing programming language.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-caption">
+        <h2>Coding Challenges</h2>
+        <p class="text-light">Python is used by top companies like Google, Facebook, Instagram, Spotify, Quora, Netflix, Dropbox, and many more.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<b class="screen-overlay"></b>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left side -->
+        <div class="col-12 col-md-2 card mobile-offcanvas card-cust" id="card_mobile">
+            <div class="card-body card-cust">
+                <div class="offcanvas-header">  
+                    <button class="btn btn-danger btn-close float-right py-0 mr-3"> <i class="fa fa-times"></i> </button>
+                </div>
+                <div><h5 class="color-pink"></h5></div>
+                <div class="topics-list">
+
+                </div>	
+            </div>
+        </div>
+        <!-- end left side -->
+        <!-- middle content -->
+        <div class="col-12 col-md-8 border-top-0 border-bottom-0 main-content">
+            <div id="info" class="m-3"></div>         
+        </div>
+        <!-- end middle side -->
+        <!-- right side -->
+        <div class="col-12 col-md-2">
+            <div class="card-body card-cust">
+                <div><h5 class="color-pink"></h5></div>
+                <div class="topics-list">
+                    
+                    
+
+                </div>	
+            </div>
+        </div>
+        <!-- end right side -->
+    </div>
+</div>
+
+<button data-trigger="#card_mobile" class="d-lg-none btn btn-success btn-topics-list" type="button" style="position: fixed; bottom: 30px; right: 30px; z-index: 1199; width: 50px; height: 50px; border-radius: 50px;">  <i class="fa fa-list-ul" style="font-size: 25px; padding-top: 1px; bottom: 0px;"></i> </button>
+  
+<br>
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+  <div>
+    <div class="container-fluid">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center bg-blue-gradiant p-0">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0 text-white">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right text-white">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fa fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fa fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fa fa-google-plus white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fa fa-linkedin white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fa fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left mt-0 pt-5 bg-light-blue">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">BTech Smart Class</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p class="text-justify">www.btechsmartclass.com is the best website for study materials for the engineering students. It provides study materials for courses of engineering.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Courses</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/c_programming/introduction-to-c-programming.html">C Programming</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/data_structures/introduction-to-algorithms.html">Data Structures</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/java/java-tutorials.html">Java Programming</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/python-coding">Python Coding</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/python/Python_Tutorial_Introduction_to_Python.html">Python Programming</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">C++</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/">Home</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/courses.html">Courses</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/downloads.html">Downloads</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="http://www.btechsmartclass.com/contact-us.html">Contact Us</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fa fa-home mr-2"></i> Hyderabad, TS, IND</p>
+        <p>
+          <i class="fa fa-envelope mr-2"></i> btechsmartclass@gmail.com</p>
+        <p>
+          <i class="fa fa-phone mr-2"></i> + 91 8143 173 148</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3  bg-blue text-white">© 2020 Copyright |
+    <a class="text-light" href="http://www.btechsmartclass.com/"> www.btechsmartclass.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/prism.js"></script>
+<script src="./js/db.js"></script>
+</body>
+</html>

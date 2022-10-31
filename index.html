@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/myStyles.css">
+
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const id = urlParams.get('id')
+    </script>
+
+    <title>BTech Smart Class Coding Ground</title>
+</head>
+<body onload="setQuestion(id-1)">
+    
+    <nav class="navbar navbar-expand-lg bg-light shadow shadow-sm">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.btechsmartclass.com/" style="font-weight: 800; color: #00308F;">BTech Smart Class</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="http://www.btechsmartclass.com/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://www.btechsmartclass.com/courses.html">Reading</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Coding Practice
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">C Programming</a></li>
+                  <li><a class="dropdown-item" href="#">Python Programming</a></li>
+                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <a href="#" class="btn"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a> | <a href="#" class="btn"> <i class="fa-solid fa-user-plus"></i> Sign Up</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid bg-green-gradient text-light">
+          <div class="row">
+              <div class="col text-center pt-3 pb-2">
+                  <h1 class="ground-title">{ Coding Ground }</h1>
+              </div>
+          </div>
+      </div>
+
+      <div class="container-fluid bg-light">
+          <div class="row d-flex">
+                <div class="col align-self-center text-dark pt-3">
+                    <p>Practice C Programming >>> Challenge <span class="badge bg-secondary" id="challengeID"></span></p>
+                </div>
+          </div>
+      </div>
+
+      <div class="container mt-3 border rounded p-3">
+          <div class="row">
+                <div class="col-lg-4 border-end">
+                    
+                    <h4 class="badge bg-danger">Problem Statement</h4>
+                    <h5 id="title"></h5>
+                    <p class="pt-2" id="statement"></p>
+                    <h4 class="badge bg-primary">Input Specifications</h4>
+                    <p id="input_specifications"></p>
+                    <h4 class="badge bg-primary">Output Specifications</h4>
+                    <p id="output_specifications"></p>
+                    <h4 class="badge bg-success">Example</h4>
+                    <p><span class="h6">Input 1:</span> <span id="input1"></span></p>
+                    <p><span class="h6">Output:</span> <span id="output1"></span></p>
+                    <p><span class="h6">Input 2:</span> <span id="input2"></span></p>
+                    <p><span class="h6">Output:</span> <span id="output2"></span></p>
+                </div>
+                <div class="col-lg-8 border-start bg-light">
+                  <form action="#" class="row">
+                      <div class="col-12 clearfix py-2">
+                            <div class="col-5 col-lg-3 float-end">
+                                <select name="codingLanguage" id="codingLanguage" class="form-select">
+                                    <option value="c">C Programming</option>
+                                    <option value="py">Python</option>
+                                    <option value="cpp">C++</option>
+                                    <option value="java">Java</option>
+                                </select>
+                            </div>
+                      </div>
+
+                      <div class="col-12 text-center mt-2 ">
+                        <textarea class="form-control" id="sample_code" rows="20" style="height: 400px" ></textarea>
+                      
+                      </div>
+
+                      <div class="col-12 text-center mt-2">
+                        <textarea class="form-control" id="actualCode" rows="20" style="height: 100px" placeholder="Enter your input here..."></textarea>
+                     
+                      </div>
+
+                      <div class="col-12 clearfix py-2">
+                        <div class="float-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa-solid fa-gear"></i> Execute</button>
+                        </div>
+                      </div> 
+                  </form>
+              </div>
+          </div>
+      </div>
+
+  
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Output</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p id="output">Your output here...</p>
+            </div>
+            <div class="modal-footer">
+              <a href="./questions.html"class="btn btn-primary">Next</a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-2 bg-light">
+        <div class="row">
+            <div class="col text-center p-3">
+                <img src="./images/logo.png" class="img img-fluid" style = "width: 20%;" alt="">
+                <p class="small mt-2">© 2022 Copyright |
+                    <a class="text-dark" href="http://www.btechsmartclass.com/"> www.btechsmartclass.com</a></p>
+            </div>
+        </div>
+    </div>
+   
+                
+    
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript Database -->
+    <script src="./js/db.js"></script>
+    <script src="./js/dbtoui.js"></script>
+</body>
+</html>
